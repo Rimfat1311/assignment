@@ -7,7 +7,7 @@ import image04 from '@/public/images/image04.png';
 import image05 from '@/public/images/image05.png';
 import image06 from '@/public/images/image06.png';
 import image7 from '@/public/images/image7.png';
-import image08 from '@/public/images/image08.png';
+import image08 from '@/public/images/image08 (1).png';
 import image09 from '@/public/images/image09.png';
 import image010 from '@/public/images/image010.png';
 
@@ -51,11 +51,11 @@ const ProductCategories: React.FC = () => {
 
       {/* Second Section */}
       <section>
-        <div className="text-center my-14">
+        <div className="text-center my-14 ">
           <p>Discover a World of Shopping at Your Fingertips!</p>
           <h1 className="font-bold font-inter text-3xl">Explore Our Diverse Product Categories</h1>
         </div>
-        <div className="flex flex-col justify-center items-center container px-6 sm:px-20 mx-auto">
+        <div className="flex flex-col justify-center items-center container px-6 sm:px-20 mx-auto space-y-20">
           {/* First row: 2 items, stacked on small screens */}
           <div className="w-full flex flex-col sm:flex-row gap-4">
             <div className="w-full sm:w-2/3 flex flex-col justify-between">
@@ -83,7 +83,7 @@ const ProductCategories: React.FC = () => {
           </div>
 
           {/* Second row: 2 items, stacked on small screens */}
-          <div className="w-full flex flex-col sm:flex-row gap-4">
+          <div className="w-full flex flex-col sm:flex-row gap-4 ">
             <div className="w-full sm:w-1/2">
               <ProductCard
                 imageSrc={image09}
