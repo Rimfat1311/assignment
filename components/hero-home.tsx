@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <div className="relative bg-gray-100">
       <div className="mx-auto">
-        {/* Image container */}
+        
         <div className="relative w-[100%] h-[80vw] pt-20 sm:h-[50vw] lg:h-[40vw]">
           <Image
             src={"/images/hero.png"}
@@ -16,7 +16,7 @@ const Hero = () => {
             alt=""
           />
           
-          {/* Overlay with transition effect */}
+        
           <div className="absolute inset-0 bg-gradient-to-r from-black to-zinc-800 opacity-90 transition-opacity duration-700 hover:opacity-60"></div>
         </div>
 
