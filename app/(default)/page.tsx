@@ -4,6 +4,7 @@ export const metadata = {
 };
 
 import Footer from "@/components/Footer";
+import Future from "@/components/Futures";
 import Hero from "@/components/hero-home";
 import Offers from "@/components/Offers";
 import Princesing from "@/components/Princesing";
@@ -17,6 +18,7 @@ export default function Home() {
       <Hero />
       <Princesing />
       <Offers />
+      <Future />
       <ProductCategories />
       <Footer />
     

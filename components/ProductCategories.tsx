@@ -11,19 +11,16 @@ import image08 from '@/public/images/image08.png';
 import image09 from '@/public/images/image09.png';
 import image010 from '@/public/images/image010.png';
 
-// Define the type for the props of the ProductCard component
 interface ProductCardProps {
-  imageSrc: StaticImageData | string; // Updated type to handle both StaticImageData and string
+  imageSrc: StaticImageData | string;
   title: string;
   description: string;
   width?: number;
   height?: number;
 }
 
-// Reusable component for the image section with type annotations
 const ProductCard: React.FC<ProductCardProps> = ({ imageSrc, title, description, width = 341, height = 326 }) => (
   <div className="h-96 flex flex-col justify-between">
-    {/* If imageSrc is a StaticImageData (imported image), use it directly with <Image /> */}
     <Image src={imageSrc} alt={title} width={width} height={height} className="mb-4" />
     <span>
       <h1 className="font-semibold">{title}</h1>
@@ -41,7 +38,8 @@ const ProductCategories: React.FC = () => {
           <p>Discover a World of Shopping at Your Fingertips!</p>
           <h1 className="font-bold font-inter text-3xl">Explore Our Diverse Product Categories</h1>
         </div>
-        <div className="grid grid-cols-3 gap-10 justify-center px-20">
+        {/* Responsive grid: 1 column on small screens, 3 columns on medium and up */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 justify-center px-6 sm:px-20">
           <ProductCard imageSrc={image01} title="Latest in Electronics" description="Trendy Fashion Finds" />
           <ProductCard imageSrc={image02} title="Stylish Home Goods" description="Smartphones, Laptops, Gadgets" />
           <ProductCard imageSrc={image03} title="Clothing, Accessories, Footwear" description="Furniture, Decor, Appliances" />
@@ -57,9 +55,10 @@ const ProductCategories: React.FC = () => {
           <p>Discover a World of Shopping at Your Fingertips!</p>
           <h1 className="font-bold font-inter text-3xl">Explore Our Diverse Product Categories</h1>
         </div>
-        <div className="flex flex-col justify-center items-center container px-20 mx-auto">
-          <div className="w-full flex flex-row gap-4">
-            <div className="w-2/3 flex flex-col justify-between">
+        <div className="flex flex-col justify-center items-center container px-6 sm:px-20 mx-auto">
+          {/* First row: 2 items, stacked on small screens */}
+          <div className="w-full flex flex-col sm:flex-row gap-4">
+            <div className="w-full sm:w-2/3 flex flex-col justify-between">
               <Image
                 src={image7}
                 alt="Latest in Electronics"
@@ -70,7 +69,7 @@ const ProductCategories: React.FC = () => {
                 <p>Trendy Fashion Finds</p>
               </span>
             </div>
-            <div className="w-1/3">
+            <div className="w-full sm:w-1/3">
               <Image
                 src={image08}
                 alt="Clothing, Accessories, Footwear"
@@ -83,8 +82,9 @@ const ProductCategories: React.FC = () => {
             </div>
           </div>
 
-          <div className="w-full flex flex-row gap-4">
-            <div className="w-1/2">
+          {/* Second row: 2 items, stacked on small screens */}
+          <div className="w-full flex flex-col sm:flex-row gap-4">
+            <div className="w-full sm:w-1/2">
               <ProductCard
                 imageSrc={image09}
                 title="Stylish Home Goods"
@@ -93,7 +93,7 @@ const ProductCategories: React.FC = () => {
                 height={286}
               />
             </div>
-            <div className="w-1/2">
+            <div className="w-full sm:w-1/2">
               <ProductCard
                 imageSrc={image010}
                 title="Fitness & Health"

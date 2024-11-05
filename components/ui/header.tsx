@@ -87,7 +87,7 @@ export default function Header() {
                   className="font-medium text-sm  text-white border-b-2 border-transparent px-2  rounded-md hover:text-[#BBA27B] mx-4 lg:mx-5 transition duration-150 ease-in-out"
                   href="#"
                 >
-                  Get started
+                  <img src="/images/Button.p" alt="" />
                 </Link>
               </li>
             </ul>
